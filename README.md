@@ -1,36 +1,196 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Remmy Moore Home Health Care Agency LLC
 
-## Getting Started
+Ultra-premium, emotionally compelling healthcare website built with Next.js 15, React, TypeScript, Tailwind CSS, and Framer Motion.
 
-First, run the development server:
+## ✨ Features
+
+### Multi-Page Professional Website
+
+- **Homepage** (`/`) - Clean, simple hero section with compelling headline and CTAs
+- **About** (`/about`) - Trust & credibility section + Why choose us
+- **Services** (`/services`) - 10 service cards + 3-step process
+- **Coverage** (`/coverage`) - Insurance & payment options for all ages
+- **Testimonials** (`/testimonials`) - Client stories + CTA banner
+- **FAQ** (`/faq`) - Filterable accordion with 12+ questions
+- **Contact** (`/contact`) - Full contact form with validation
+- **404 Page** - Branded error page
+
+### Premium Components
+
+- Sticky navigation with smooth transitions
+- Full-screen parallax hero with animated stats
+- Animated service cards with hover effects
+- Interactive comparison tables
+- Auto-playing testimonial carousel
+- Floating contact button (persistent across all pages)
+- Professional footer with social links
+- Mobile-responsive design
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- npm or yarn
+
+### Installation
 
 ```bash
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+remmy-moore-health/
+├── src/
+│   ├── app/
+│   │   ├── about/
+│   │   │   └── page.tsx        # About page
+│   │   ├── services/
+│   │   │   └── page.tsx        # Services page
+│   │   ├── coverage/
+│   │   │   └── page.tsx        # Coverage page
+│   │   ├── testimonials/
+│   │   │   └── page.tsx        # Testimonials page
+│   │   ├── faq/
+│   │   │   └── page.tsx        # FAQ page
+│   │   ├── contact/
+│   │   │   └── page.tsx        # Contact page
+│   │   ├── layout.tsx          # Root layout with metadata
+│   │   ├── page.tsx            # Homepage (Hero only)
+│   │   ├── not-found.tsx       # 404 page
+│   │   └── globals.css         # Global styles
+│   └── components/
+│       ├── Navbar.tsx          # Sticky navigation
+│       ├── Hero.tsx            # Hero section
+│       ├── TrustSection.tsx    # Trust & credentials
+│       ├── ServicesSection.tsx # Services grid
+│       ├── WhyUsSection.tsx    # Why choose us
+│       ├── CoverageSection.tsx # Insurance coverage
+│       ├── TestimonialsSection.tsx # Client testimonials
+│       ├── ProcessSection.tsx  # 3-step process
+│       ├── CTABanner.tsx       # Call-to-action banner
+│       ├── FAQSection.tsx      # FAQ accordion
+│       ├── ContactSection.tsx  # Contact form
+│       ├── Footer.tsx          # Site footer
+│       └── FloatingCTA.tsx     # Floating contact button
+├── public/
+│   └── images/                 # Place your images here
+└── package.json
+```
 
-## Learn More
+## 🎨 Customization
 
-To learn more about Next.js, take a look at the following resources:
+### Adding Your Hero Image
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Place your hero background image at:
+```
+public/images/hero-bg.jpg
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The hero section will automatically use it. Current fallback is a dark blue gradient.
 
-## Deploy on Vercel
+### Updating Contact Information
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Edit these files to update contact details:
+- `src/components/Navbar.tsx` - Phone number in header
+- `src/components/Hero.tsx` - Hero CTAs
+- `src/components/ContactSection.tsx` - Contact form and info
+- `src/components/Footer.tsx` - Footer contact details
+- `src/components/FloatingCTA.tsx` - Floating button
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Navigation Structure
+
+The site uses Next.js App Router with the following pages:
+- `/` - Homepage (Hero section only)
+- `/about` - About us (Trust + Why Us sections)
+- `/services` - Services (Services + Process sections)
+- `/coverage` - Insurance & Coverage
+- `/testimonials` - Client testimonials + CTA
+- `/faq` - Frequently asked questions
+- `/contact` - Contact form
+
+All navigation links are in `src/components/Navbar.tsx` and `src/components/Footer.tsx`.
+
+### Changing Colors
+
+The color scheme is defined in `src/app/globals.css`:
+```css
+:root {
+  --primary: #2563eb;        /* Healthcare Blue */
+  --primary-dark: #1d4ed8;
+  --primary-light: #eff6ff;
+  --accent: #0ea5e9;
+  /* ... */
+}
+```
+
+### Updating Metadata
+
+Edit `src/app/layout.tsx` to update:
+- Site title
+- Meta description
+- Open Graph images
+- Keywords
+- Canonical URL
+
+## 🔧 Tech Stack
+
+- **Framework**: Next.js 15 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Font**: Inter (Google Fonts)
+
+## ✅ Quality Checks
+
+- ✅ Zero ESLint errors
+- ✅ Zero TypeScript errors
+- ✅ Production build passes
+- ✅ Accessibility compliant (ARIA labels, semantic HTML)
+- ✅ SEO optimized (metadata, Open Graph, Twitter cards)
+- ✅ Mobile responsive
+- ✅ Hydration warnings suppressed
+
+## 📱 Responsive Design
+
+The site is fully responsive with breakpoints:
+- Mobile: < 640px
+- Tablet: 640px - 1024px
+- Desktop: > 1024px
+
+## 🎯 Performance
+
+- Static site generation (SSG)
+- Optimized images
+- Code splitting
+- Lazy loading
+- Minimal JavaScript bundle
+
+## 📄 License
+
+Copyright © 2026 Remmy Moore Home Health Care Agency LLC. All rights reserved.
+
+## 🤝 Support
+
+For questions or support, contact:
+- Phone: (800) 000-0000
+- Email: info@remmymoorehealthcare.com
+
+---
+
+Built with ❤️ for compassionate home health care.
