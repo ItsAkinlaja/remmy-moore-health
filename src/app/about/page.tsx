@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import TrustSection from "@/components/TrustSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import Footer from "@/components/Footer";
@@ -14,11 +14,14 @@ export default function AboutPage() {
   return (
     <main>
       <Navbar />
-      <div className="pt-24">
-        <Breadcrumb />
-        <TrustSection />
-        <WhyUsSection />
-      </div>
+      <PageHero
+        title="About Us"
+        subtitle="Trusted Home Health Care Since 2015"
+        image="https://images.unsplash.com/photo-1631217314830-acf6f1b2b735?w=1200&h=600&fit=crop"
+        height="45"
+      />
+      <TrustSection />
+      <WhyUsSection />
       <Footer />
       <FloatingCTA />
     </main>

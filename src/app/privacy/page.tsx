@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -10,9 +10,13 @@ export default function PrivacyPage() {
   return (
     <main>
       <Navbar />
-      <div className="pt-24 pb-24 px-4 max-w-4xl mx-auto">
-        <Breadcrumb />
-        <h1 className="text-4xl font-bold mt-12 mb-8">Privacy Policy</h1>
+      <PageHero
+        title="Privacy Policy"
+        subtitle="Your Privacy is Our Priority"
+        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+        height="40"
+      />
+      <div className="py-24 px-4 max-w-4xl mx-auto">
         <div className="prose prose-slate max-w-none space-y-6 text-slate-600">
           <p>Last Updated: May 2024</p>
           <p>Remmy Moore Home Health Care Agency LLC (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information.</p>

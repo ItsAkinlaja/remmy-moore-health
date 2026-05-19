@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -32,9 +32,13 @@ export default function ContactPage() {
   return (
     <main className="bg-white">
       <Navbar />
-      <div className="pt-24">
-        <Breadcrumb />
-
+      <PageHero
+        title="Get in Touch"
+        subtitle="We're Ready to Help. Let's Connect."
+        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+        height="45"
+      />
+      <div className="pt-0">
         <ContactSection />
 
         {/* What Happens Next Section */}

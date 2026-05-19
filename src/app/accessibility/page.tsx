@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 
 export const metadata = {
@@ -10,9 +10,13 @@ export default function AccessibilityPage() {
   return (
     <main>
       <Navbar />
-      <div className="pt-24 pb-24 px-4 max-w-4xl mx-auto">
-        <Breadcrumb />
-        <h1 className="text-4xl font-bold mt-12 mb-8">Accessibility Statement</h1>
+      <PageHero
+        title="Accessibility Statement"
+        subtitle="Committed to Digital Accessibility for All"
+        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+        height="40"
+      />
+      <div className="py-24 px-4 max-w-4xl mx-auto">
         <div className="prose prose-slate max-w-none space-y-6 text-slate-600">
           <p>Remmy Moore Home Health Care Agency LLC is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards.</p>
           <h2 className="text-2xl font-bold text-slate-900 mt-8">Conformance Status</h2>

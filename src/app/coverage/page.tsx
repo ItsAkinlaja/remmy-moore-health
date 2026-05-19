@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import CoverageSection from "@/components/CoverageSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -13,10 +13,13 @@ export default function CoveragePage() {
   return (
     <main>
       <Navbar />
-      <div className="pt-24">
-        <Breadcrumb />
-        <CoverageSection />
-      </div>
+      <PageHero
+        title="Insurance & Coverage"
+        subtitle="We Work with Most Insurance Plans"
+        image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop"
+        height="45"
+      />
+      <CoverageSection />
       <Footer />
       <FloatingCTA />
     </main>

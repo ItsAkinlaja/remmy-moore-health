@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
@@ -14,11 +14,14 @@ export default function TestimonialsPage() {
   return (
     <main>
       <Navbar />
-      <div className="pt-24">
-        <Breadcrumb />
-        <TestimonialsSection />
-        <CTABanner />
-      </div>
+      <PageHero
+        title="Client Testimonials"
+        subtitle="Hear from Families We've Helped"
+        image="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=600&fit=crop"
+        height="45"
+      />
+      <TestimonialsSection />
+      <CTABanner />
       <Footer />
       <FloatingCTA />
     </main>

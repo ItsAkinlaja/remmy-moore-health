@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import Breadcrumb from "@/components/Breadcrumb";
+import PageHero from "@/components/PageHero";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -13,10 +13,13 @@ export default function FAQPage() {
   return (
     <main>
       <Navbar />
-      <div className="pt-24">
-        <Breadcrumb />
-        <FAQSection />
-      </div>
+      <PageHero
+        title="Frequently Asked Questions"
+        subtitle="Find Answers to Your Questions"
+        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+        height="45"
+      />
+      <FAQSection />
       <Footer />
       <FloatingCTA />
     </main>
