@@ -14,7 +14,7 @@ export default function TermsPage() {
         title="Terms of Service"
         subtitle="Please Read Our Terms Carefully"
         image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
-        height="40"
+        height="60"
       />
       <div className="py-24 px-4 max-w-4xl mx-auto">
         <div className="prose prose-slate max-w-none space-y-6 text-slate-600">

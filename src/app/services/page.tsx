@@ -18,7 +18,7 @@ export default function ServicesPage() {
         title="Our Services"
         subtitle="Comprehensive Care for Every Need"
         image="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=1200&h=600&fit=crop"
-        height="45"
+        height="60"
       />
       <ServicesSection showAllButton={false} />
       <ProcessSection />

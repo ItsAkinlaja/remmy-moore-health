@@ -12,7 +12,7 @@ interface PageHeroProps {
   /** Optional subtitle or description */
   subtitle?: string;
   /** Height of hero section in viewport height (default: 45) */
-  height?: "40" | "45" | "50";
+  height?: "40" | "45" | "50" | "60";
   /** Optional dark overlay opacity (default: 0.5) */
   overlayOpacity?: number;
   /** Optional text color (default: white) */
@@ -31,6 +31,7 @@ export default function PageHero({
     "40": "h-[40vh]",
     "45": "h-[45vh]",
     "50": "h-[50vh]",
+    "60": "h-[60vh]",
   }[height];
 
   return (

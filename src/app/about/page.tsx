@@ -18,7 +18,7 @@ export default function AboutPage() {
         title="About Us"
         subtitle="Trusted Home Health Care Since 2015"
         image="https://images.unsplash.com/photo-1631217314830-acf6f1b2b735?w=1200&h=600&fit=crop"
-        height="45"
+        height="60"
       />
       <TrustSection />
       <WhyUsSection />
