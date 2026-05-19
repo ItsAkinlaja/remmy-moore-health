@@ -1,8 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
-  Heart,
   Phone,
   Mail,
   MapPin,
@@ -78,26 +78,21 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-slate-900 text-white relative overflow-hidden" role="contentinfo">
-      {/* Background decoration */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
-        <div className="absolute -top-40 right-0 w-96 h-96 rounded-full bg-blue-900/20 blur-3xl" />
-        <div className="absolute -bottom-40 left-0 w-96 h-96 rounded-full bg-sky-900/20 blur-3xl" />
-      </div>
-
+    <footer className="bg-slate-900 text-white relative border-t border-slate-800" role="contentinfo">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main footer content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg">
-                <Heart className="w-6 h-6 text-white fill-white" aria-hidden="true" />
-              </div>
-              <div>
-                <div className="font-bold text-white text-sm leading-tight">Remmy Moore</div>
-                <div className="text-blue-400 text-xs">Home Health Care Agency LLC</div>
+            <div className="flex items-center mb-6">
+              <div className="relative w-20 h-20">
+                <Image
+                  src="/logo.png"
+                  alt="Remmy Moore Home Health Care Agency LLC logo"
+                  fill
+                  sizes="80px"
+                  className="object-contain"
+                />
               </div>
             </div>
 

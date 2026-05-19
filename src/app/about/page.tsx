@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Breadcrumb from "@/components/Breadcrumb";
 import TrustSection from "@/components/TrustSection";
 import WhyUsSection from "@/components/WhyUsSection";
 import Footer from "@/components/Footer";
@@ -14,6 +15,7 @@ export default function AboutPage() {
     <main>
       <Navbar />
       <div className="pt-24">
+        <Breadcrumb />
         <TrustSection />
         <WhyUsSection />
       </div>

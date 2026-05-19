@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Breadcrumb from "@/components/Breadcrumb";
 import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import Footer from "@/components/Footer";
@@ -14,7 +15,8 @@ export default function ServicesPage() {
     <main>
       <Navbar />
       <div className="pt-24">
-        <ServicesSection />
+        <Breadcrumb />
+        <ServicesSection showAllButton={false} />
         <ProcessSection />
       </div>
       <Footer />

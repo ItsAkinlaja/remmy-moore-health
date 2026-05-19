@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Breadcrumb from "@/components/Breadcrumb";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import CTABanner from "@/components/CTABanner";
 import Footer from "@/components/Footer";
@@ -14,6 +15,7 @@ export default function TestimonialsPage() {
     <main>
       <Navbar />
       <div className="pt-24">
+        <Breadcrumb />
         <TestimonialsSection />
         <CTABanner />
       </div>

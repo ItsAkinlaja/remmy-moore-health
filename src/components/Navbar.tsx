@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Phone, Heart } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
+import Image from "next/image";
 
 import Link from "next/link";
 
@@ -56,25 +57,21 @@ export default function Navbar() {
             {/* Logo */}
             <Link
               href="/"
-              className="flex items-center gap-3 group"
+              className="flex items-center group"
               aria-label="Remmy Moore Home Health Care Agency LLC - Home"
             >
               <motion.div whileHover={{ scale: 1.02 }}>
-                <div className="relative">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/30">
-                    <Heart className="w-5 h-5 text-white fill-white" aria-hidden="true" />
-                  </div>
-                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full border-2 border-white" aria-hidden="true" />
+                <div className="relative w-24 h-24 sm:w-28 sm:h-28">
+                  <Image
+                    src="/logo.png"
+                    alt="Remmy Moore Home Health Care Agency LLC logo"
+                    fill
+                    priority
+                    sizes="(min-width: 640px) 112px, 96px"
+                    className="object-contain"
+                  />
                 </div>
               </motion.div>
-              <div className="hidden sm:block">
-                <div className={`font-bold text-sm leading-tight transition-colors duration-300 ${scrolled ? "text-slate-900" : "text-white"}`}>
-                  Remmy Moore
-                </div>
-                <div className={`text-xs leading-tight transition-colors duration-300 ${scrolled ? "text-blue-600" : "text-blue-200"}`}>
-                  Home Health Care Agency
-                </div>
-              </div>
             </Link>
 
             {/* Desktop Nav */}
@@ -108,7 +105,7 @@ export default function Navbar() {
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={() => window.location.href = '/contact'}
-                className="px-5 py-2.5 bg-gradient-to-r from-blue-600 to-sky-500 text-white text-sm font-semibold rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-blue-500/50 transition-all duration-300"
+                className="px-5 py-2.5 bg-blue-600 text-white text-sm font-bold rounded-lg hover:bg-blue-700 transition-colors duration-200"
               >
                 Get Started
               </motion.button>
@@ -151,12 +148,14 @@ export default function Navbar() {
             <div className="absolute right-0 top-0 bottom-0 w-80 bg-white shadow-2xl flex flex-col">
               <div className="flex items-center justify-between p-6 border-b border-slate-100">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-sky-500 flex items-center justify-center">
-                    <Heart className="w-4 h-4 text-white fill-white" />
-                  </div>
-                  <div>
-                    <div className="font-bold text-sm text-slate-900">Remmy Moore</div>
-                    <div className="text-xs text-blue-600">Home Health Care</div>
+                    <div className="relative w-16 h-16">
+                      <Image
+                        src="/logo.png"
+                        alt="Remmy Moore Home Health Care Agency LLC logo"
+                        fill
+                        sizes="64px"
+                        className="object-contain"
+                      />
                   </div>
                 </div>
                 <button
@@ -200,7 +199,7 @@ export default function Navbar() {
                     setMobileOpen(false);
                     window.location.href = '/contact';
                   }}
-                  className="w-full py-3 bg-gradient-to-r from-blue-600 to-sky-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/30"
+                  className="w-full py-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors"
                 >
                   Get Started Today
                 </button>

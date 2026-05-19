@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Breadcrumb from "@/components/Breadcrumb";
 import CoverageSection from "@/components/CoverageSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -13,6 +14,7 @@ export default function CoveragePage() {
     <main>
       <Navbar />
       <div className="pt-24">
+        <Breadcrumb />
         <CoverageSection />
       </div>
       <Footer />

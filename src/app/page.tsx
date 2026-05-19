@@ -1,5 +1,9 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import HomepageTrustRibbon from "@/components/HomepageTrustRibbon";
+import HomepageVisualStory from "@/components/HomepageVisualStory";
+import ServicesSection from "@/components/ServicesSection";
+import ProcessSection from "@/components/ProcessSection";
 import HomePreview from "@/components/HomePreview";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -18,6 +22,10 @@ export default function Home() {
 
       <div id="main-content">
         <Hero />
+        <HomepageTrustRibbon />
+        <HomepageVisualStory />
+        <ServicesSection />
+        <ProcessSection />
         <HomePreview />
       </div>
 

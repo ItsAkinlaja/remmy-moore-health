@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Breadcrumb from "@/components/Breadcrumb";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
@@ -13,6 +14,7 @@ export default function FAQPage() {
     <main>
       <Navbar />
       <div className="pt-24">
+        <Breadcrumb />
         <FAQSection />
       </div>
       <Footer />

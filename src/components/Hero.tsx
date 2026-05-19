@@ -7,7 +7,6 @@ import {
   Shield,
   CheckCircle,
   Phone,
-  Calendar,
   ArrowRight,
   Award,
   Heart,
@@ -69,23 +68,6 @@ export default function Hero() {
       >
         {/* max width keeps text tight and readable */}
         <div className="max-w-2xl">
-
-          {/* accepting badge */}
-          <motion.div
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.15 }}
-            className="inline-flex items-center gap-2.5 px-4 py-2 mb-8
-                       rounded-full border border-white/15
-                       bg-white/8 backdrop-blur-sm
-                       text-white/80 text-sm font-medium"
-          >
-            <span className="relative flex h-2 w-2 flex-shrink-0">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400" />
-            </span>
-            Now Accepting New Clients — Medicaid &amp; Medicare Welcome
-          </motion.div>
 
           {/* headline */}
           <motion.h1
@@ -154,19 +136,6 @@ export default function Hero() {
               Call Now
             </motion.a>
 
-            <Link href="/contact">
-              <motion.button
-                whileHover={{ scale: 1.03 }}
-                whileTap={{ scale: 0.97 }}
-                className="flex items-center gap-2 px-7 py-3.5 rounded-xl
-                           bg-white text-slate-800 font-semibold text-sm
-                           shadow-md hover:shadow-lg
-                           transition-shadow duration-200"
-              >
-                <Calendar className="w-4 h-4 text-blue-600" />
-                Schedule Care
-              </motion.button>
-            </Link>
           </motion.div>
 
           {/* trust badges — small, clean row */}
