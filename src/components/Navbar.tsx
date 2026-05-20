@@ -47,8 +47,8 @@ export default function Navbar() {
         transition={{ duration: 0.6, ease: "easeOut" }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "glass shadow-lg shadow-blue-900/10 py-3"
-            : "bg-transparent py-5"
+            ? "glass shadow-lg shadow-blue-900/10 py-2"
+            : "bg-transparent py-3"
         }`}
         role="banner"
       >
@@ -61,14 +61,18 @@ export default function Navbar() {
               aria-label="Remmy Moore Home Health Care Agency LLC - Home"
             >
               <motion.div whileHover={{ scale: 1.02 }}>
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28">
+                <div className="relative w-28 h-28 sm:w-36 sm:h-36">
                   <Image
-                    src="https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png"
+                    src={
+                      scrolled
+                        ? "https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png"
+                        : "https://ik.imagekit.io/scmchurch/ChatGPT_Image_May_20__2026__06_07_45_AM-removebg-preview.png?updatedAt=1779253794957"
+                    }
                     alt="Remmy Moore Home Health Care Agency LLC logo"
                     fill
                     priority
-                    sizes="(min-width: 640px) 112px, 96px"
-                    className="object-contain"
+                    sizes="(min-width: 640px) 144px, 112px"
+                    className="object-contain transition-all duration-300"
                   />
                 </div>
               </motion.div>
@@ -136,7 +140,7 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="fixed inset-0 z-40 lg:hidden"
+            className="fixed inset-0 z-60 lg:hidden"
             role="dialog"
             aria-modal="true"
             aria-label="Mobile navigation"
@@ -148,13 +152,17 @@ export default function Navbar() {
             <div className="absolute right-0 top-0 bottom-0 w-80 bg-white shadow-2xl flex flex-col">
               <div className="flex items-center justify-between p-6 border-b border-slate-100">
                 <div className="flex items-center gap-3">
-                    <div className="relative w-16 h-16">
+                    <div className="relative w-20 h-20">
                       <Image
-                        src="https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png"
+                        src={
+                          scrolled
+                            ? "https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png"
+                            : "https://ik.imagekit.io/scmchurch/ChatGPT_Image_May_20__2026__06_07_45_AM-removebg-preview.png?updatedAt=1779253794957"
+                        }
                         alt="Remmy Moore Home Health Care Agency LLC logo"
                         fill
                         sizes="64px"
-                        className="object-contain"
+                        className="object-contain transition-all duration-300"
                       />
                   </div>
                 </div>
