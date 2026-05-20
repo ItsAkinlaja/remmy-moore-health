@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Remmy Moore - Heart Health Icon</title>
+  <rect width="64" height="64" rx="12" fill="#ffffff"/>
+  <g transform="translate(8 8)">
+    <circle cx="24" cy="24" r="24" fill="#ffffff" opacity="0"/>
+    <path d="M24 6c-4.8 0-7.4 3.1-9 5-1.6-1.9-4.2-5-9-5C1.6 6 0 8.7 0 11.2 0 22.8 24 36 24 36s24-13.2 24-24.8C48 8.7 46.4 6 38 6c-4.8 0-7.4 3.1-9 5-1.6-1.9-4.2-5-9-5z" fill="#0ea5e9"/>
+    <rect x="19" y="17" width="6" height="12" rx="1" transform="rotate(0 19 17)" fill="#ffffff"/>
+    <rect x="16" y="22" width="12" height="6" rx="1" transform="rotate(0 16 22)" fill="#ffffff"/>
+  </g>
+</svg>

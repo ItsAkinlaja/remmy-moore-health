@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   keywords: ["home health care", "Remmy Moore", "skilled nursing", "personal care", "elderly care", "pediatric home care", "Medicaid", "Medicare"],
   authors: [{ name: "Remmy Moore Home Health Care Agency LLC" }],
   icons: {
-    icon: "/favicon.ico",
-    apple: "/logo.png",
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
     type: "website",
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     description: "Professional home health care services delivered with compassion and dignity.",
     images: [
       {
-        url: "/logo.png",
-        width: 800,
-        height: 800,
-        alt: "Remmy Moore Home Health Care Agency LLC Logo",
+        url: "https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png?updatedAt=1779253324973",
+        width: 1200,
+        height: 630,
+        alt: "Remmy Moore Home Health Care Agency - Social Share",
       },
     ],
   },
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Remmy Moore Home Health Care Agency LLC",
     description: "Compassionate home health care services.",
-    images: ["/logo.png"],
+    images: ["https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png?updatedAt=1779253324973"],
   },
 };
 
