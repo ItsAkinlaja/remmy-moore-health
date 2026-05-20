@@ -63,7 +63,7 @@ export default function Navbar() {
               <motion.div whileHover={{ scale: 1.02 }}>
                 <div className="relative w-24 h-24 sm:w-28 sm:h-28">
                   <Image
-                    src="/logo.png"
+                    src="https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png"
                     alt="Remmy Moore Home Health Care Agency LLC logo"
                     fill
                     priority
@@ -150,7 +150,7 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                     <div className="relative w-16 h-16">
                       <Image
-                        src="/logo.png"
+                        src="https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png"
                         alt="Remmy Moore Home Health Care Agency LLC logo"
                         fill
                         sizes="64px"

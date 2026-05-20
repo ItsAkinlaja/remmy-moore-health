@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from "react";
-import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -30,15 +29,10 @@ const testimonials = [
 ];
 
 export default function TestimonialsSection() {
-  const [current, setCurrent] = useState(0);
-
-  const next = () => setCurrent((prev) => (prev + 1) % testimonials.length);
-  const prev = () => setCurrent((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-
   return (
     <section id="testimonials" className="py-24 bg-white" aria-labelledby="testimonials-heading">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
           <h2 id="testimonials-heading" className="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
             Family Stories
           </h2>
@@ -52,35 +46,25 @@ export default function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="relative bg-slate-50 rounded-3xl p-8 sm:p-12 border border-slate-100">
-          <Quote className="w-12 h-12 text-blue-600/20 absolute top-8 left-8" />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {testimonials.map((t, i) => (
+            <article key={i} className="relative bg-slate-50 rounded-2xl p-6 border border-slate-100 shadow-sm">
+              <Quote className="w-10 h-10 text-blue-600/20 absolute top-4 left-4" />
+              <p className="text-base sm:text-lg text-slate-900 font-medium leading-relaxed mb-6 italic">
+                &ldquo;{t.text}&rdquo;
+              </p>
 
-          <div className="relative z-10">
-            <p className="text-xl sm:text-2xl text-slate-900 font-medium leading-relaxed mb-8 italic">
-              &ldquo;{testimonials[current].text}&rdquo;
-            </p>
-
-            <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold">
-                  {testimonials[current].initials || testimonials[current].name[0]}
+                  {t.initials || t.name[0]}
                 </div>
                 <div>
-                  <div className="font-bold text-slate-900">{testimonials[current].name}</div>
-                  <div className="text-sm text-slate-500">{testimonials[current].role}</div>
+                  <div className="font-bold text-slate-900">{t.name}</div>
+                  <div className="text-sm text-slate-500">{t.role}</div>
                 </div>
               </div>
-
-              <div className="flex gap-2">
-                <button onClick={prev} className="p-2 rounded-full bg-white border border-slate-200 hover:border-blue-600 transition-colors">
-                  <ChevronLeft className="w-5 h-5 text-slate-600" />
-                </button>
-                <button onClick={next} className="p-2 rounded-full bg-white border border-slate-200 hover:border-blue-600 transition-colors">
-                  <ChevronRight className="w-5 h-5 text-slate-600" />
-                </button>
-              </div>
-            </div>
-          </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

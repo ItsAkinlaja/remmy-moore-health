@@ -85,12 +85,12 @@ export default function Footer() {
           {/* Brand column */}
           <div className="lg:col-span-1">
             <div className="flex items-center mb-6">
-              <div className="relative w-20 h-20">
+              <div className="relative w-36 h-36">
                 <Image
-                  src="/logo.png"
+                  src="https://ik.imagekit.io/scmchurch/ChatGPT_Image_May_20__2026__06_07_45_AM-removebg-preview.png"
                   alt="Remmy Moore Home Health Care Agency LLC logo"
                   fill
-                  sizes="80px"
+                  sizes="144px"
                   className="object-contain"
                 />
               </div>
