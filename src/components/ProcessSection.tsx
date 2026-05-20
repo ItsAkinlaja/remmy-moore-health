@@ -62,8 +62,8 @@ export default function ProcessSection() {
             Our care coordinators are standing by to help you navigate your options and find the best fit for your family.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+1-800-000-0000" className="bg-white text-blue-600 px-8 py-3.5 rounded-lg font-bold hover:bg-blue-50 transition-colors">
-              Call (800) 000-0000
+            <a href="tel:+16785994557" className="bg-white text-blue-600 px-8 py-3.5 rounded-lg font-bold hover:bg-blue-50 transition-colors">
+              Call 678 599 4557
             </a>
             <a href="/contact" className="bg-blue-700 text-white px-8 py-3.5 rounded-lg font-bold hover:bg-blue-800 transition-colors border border-blue-500">
               Request Assessment

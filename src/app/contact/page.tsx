@@ -7,7 +7,7 @@ import { Clock, Phone, UserCheck } from "lucide-react";
 
 export const metadata = {
   title: "Contact Us | Remmy Moore Home Health Care Agency",
-  description: "Get in touch with Remmy Moore Home Health Care Agency. Call us at (800) 000-0000 or fill out our contact form for a free consultation.",
+  description: "Get in touch with Remmy Moore Home Health Care Agency. Call 678 599 4557, email Remmymoore90@gmail.com, or visit 170 Shady Lane, Rockmart, GA 30153.",
 };
 
 const nextSteps = [

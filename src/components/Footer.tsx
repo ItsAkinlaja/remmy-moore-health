@@ -10,6 +10,12 @@ import {
   Shield,
 } from "lucide-react";
 
+const primaryPhone = "678 599 4557";
+const primaryPhoneHref = "tel:+16785994557";
+const contactEmail = "Remmymoore90@gmail.com";
+const contactEmailHref = "mailto:Remmymoore90@gmail.com";
+const contactAddress = "170 Shady Lane, Rockmart, GA 30153";
+
 // Custom social icons as SVGs
 function FacebookIcon({ className }: { className?: string }) {
   return (
@@ -167,9 +173,9 @@ export default function Footer() {
             </h3>
             <div className="space-y-4">
               <a
-                href="tel:+1-800-000-0000"
+                href={primaryPhoneHref}
                 className="flex items-start gap-3 group"
-                aria-label="Call us at (800) 000-0000"
+                aria-label={`Call us at ${primaryPhone}`}
               >
                 <div className="w-8 h-8 rounded-lg bg-blue-600/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-600/40 transition-colors">
                   <Phone className="w-4 h-4 text-blue-400" aria-hidden="true" />
@@ -177,13 +183,13 @@ export default function Footer() {
                 <div>
                   <div className="text-xs text-slate-500 mb-0.5">Phone</div>
                   <div className="text-slate-300 text-sm group-hover:text-white transition-colors">
-                    (800) 000-0000
+                    {primaryPhone}
                   </div>
                 </div>
               </a>
 
               <a
-                href="mailto:info@remmymoorehealthcare.com"
+                href={contactEmailHref}
                 className="flex items-start gap-3 group"
                 aria-label="Email us"
               >
@@ -193,7 +199,7 @@ export default function Footer() {
                 <div>
                   <div className="text-xs text-slate-500 mb-0.5">Email</div>
                   <div className="text-slate-300 text-sm group-hover:text-white transition-colors break-all">
-                    info@remmymoorehealthcare.com
+                    {contactEmail}
                   </div>
                 </div>
               </a>
@@ -204,7 +210,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <div className="text-xs text-slate-500 mb-0.5">Service Area</div>
-                  <div className="text-slate-300 text-sm">Serving Our Local Community</div>
+                  <div className="text-slate-300 text-sm">{contactAddress}</div>
                 </div>
               </div>
 

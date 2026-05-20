@@ -56,7 +56,7 @@ export default function HomepageVisualStory() {
                 Get Started
                 <ArrowRight className="w-4 h-4" />
               </Link>
-              <a href="tel:+1-800-000-0000" className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-7 py-3.5 text-slate-700 font-semibold hover:bg-slate-50 transition-colors">
+              <a href="tel:+16785994557" className="inline-flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-7 py-3.5 text-slate-700 font-semibold hover:bg-slate-50 transition-colors">
                 <Phone className="w-4 h-4" />
                 Contact Us
               </a>

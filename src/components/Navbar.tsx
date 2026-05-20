@@ -96,14 +96,14 @@ export default function Navbar() {
             {/* CTA */}
             <div className="hidden lg:flex items-center gap-3">
               <a
-                href="tel:+1-800-000-0000"
+                href="tel:+16785994557"
                 className={`flex items-center gap-2 text-sm font-medium transition-colors duration-200 ${
                   scrolled ? "text-slate-700 hover:text-blue-600" : "text-white/90 hover:text-white"
                 }`}
-                aria-label="Call us"
+                aria-label="Call us at 678 599 4557"
               >
                 <Phone className="w-4 h-4" aria-hidden="true" />
-                <span>(800) 000-0000</span>
+                <span>678 599 4557</span>
               </a>
               <motion.button
                 whileHover={{ scale: 1.03 }}
@@ -196,11 +196,11 @@ export default function Navbar() {
 
               <div className="p-6 border-t border-slate-100 space-y-3">
                 <a
-                  href="tel:+1-800-000-0000"
+                  href="tel:+16785994557"
                   className="flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 text-slate-700 font-medium hover:bg-blue-50 hover:text-blue-600 transition-colors"
                 >
                   <Phone className="w-4 h-4" />
-                  (800) 000-0000
+                  678 599 4557
                 </a>
                 <button
                   onClick={() => {

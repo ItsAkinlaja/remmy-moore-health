@@ -105,7 +105,7 @@ export default function CoverageSection() {
         <div className="mt-16 text-center">
           <p className="text-slate-700 font-bold mb-8 text-lg">Not sure if you qualify? Let us help.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+1-800-000-0000" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+            <a href="tel:+16785994557" className="bg-blue-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-blue-700 transition-colors">
               Check Your Eligibility
             </a>
             <a href="/contact" className="bg-white text-slate-900 border border-slate-200 px-8 py-4 rounded-lg font-bold hover:bg-slate-50 transition-colors">

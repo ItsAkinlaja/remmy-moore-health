@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import {
   Phone,
   Mail,
@@ -10,27 +11,26 @@ import {
   MessageSquare,
   ArrowRight,
 } from "lucide-react";
-import { submitContactForm } from "@/lib/actions";
 
 const contactInfo = [
   {
     icon: Phone,
     label: "Call Us 24/7",
-    value: "(800) 000-0000",
-    href: "tel:+1-800-000-0000",
+    value: "678 599 4557",
+    href: "tel:+16785994557",
     description: "Our care coordinators are always available to help."
   },
   {
     icon: Mail,
     label: "Email Us",
-    value: "info@remmymoorehealthcare.com",
-    href: "mailto:info@remmymoorehealthcare.com",
+    value: "Remmymoore90@gmail.com",
+    href: "mailto:Remmymoore90@gmail.com",
     description: "We typically respond within 2 business hours."
   },
   {
     icon: MapPin,
     label: "Service Area",
-    value: "Local Community Care",
+    value: "170 Shady Lane, Rockmart, GA 30153",
     href: null,
     description: "Providing home health services throughout our local region."
   },
@@ -53,20 +53,60 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+  const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
     setError(null);
 
     const formData = new FormData(e.currentTarget);
-    const result = await submitContactForm(formData);
+    const firstName = String(formData.get("firstName") || "").trim();
+    const lastName = String(formData.get("lastName") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const phone = String(formData.get("phone") || "").trim();
+    const service = String(formData.get("service") || "").trim();
+    const message = String(formData.get("message") || "").trim();
 
-    setLoading(false);
+    if (!serviceId || !templateId || !publicKey) {
+      setLoading(false);
+      setError("Email service is not configured yet. Please contact the site admin.");
+      return;
+    }
 
-    if (result.success) {
+    if (!firstName || !lastName || !email || !phone || !message) {
+      setLoading(false);
+      setError("All required fields must be filled out.");
+      return;
+    }
+
+    try {
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          first_name: firstName,
+          last_name: lastName,
+          from_name: `${firstName} ${lastName}`,
+          reply_to: email,
+          phone,
+          service,
+          message,
+          to_email: "Remmymoore90@gmail.com",
+          to_phone: "678 599 4557",
+          location: "170 Shady Lane, Rockmart, GA 30153",
+        },
+        { publicKey }
+      );
+
       setSubmitted(true);
-    } else {
-      setError(result.error || "An unexpected error occurred.");
+    } catch (submitError) {
+      console.error("EmailJS submission error:", submitError);
+      setError("There was an error sending your message. Please try again later or call us directly.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -110,6 +150,7 @@ export default function ContactSection() {
                   </div>
                 </div>
               ))}
+
             </div>
 
             <div className="p-8 rounded-3xl bg-slate-900 text-white relative overflow-hidden">

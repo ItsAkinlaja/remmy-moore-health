@@ -1,8 +1,8 @@
 "use server";
 
 /**
- * Server Action to handle Contact Form submissions.
- * In a real production environment, you would use a service like Resend, SendGrid, or Postmark here.
+ * Legacy server action kept for reference.
+ * The live contact form now submits through EmailJS on the client.
  */
 export async function submitContactForm(formData: FormData) {
   // Extract data
@@ -22,16 +22,6 @@ export async function submitContactForm(formData: FormData) {
   }
 
   try {
-    // ── PRO PRODUCTION STEP ──────────────────────────────────
-    // Here you would integrate with an email provider.
-    // Example with Resend:
-    // await resend.emails.send({
-    //   from: 'Remmy Moore Health <onboarding@resend.dev>',
-    //   to: ['info@remmymoorehealthcare.com'],
-    //   subject: `New Care Inquiry from ${firstName} ${lastName}`,
-    //   text: `Service: ${service}\nPhone: ${phone}\nEmail: ${email}\n\nMessage: ${message}`,
-    // });
-
     // Simulate network delay for better UX (loading states)
     await new Promise((resolve) => setTimeout(resolve, 1000));
 

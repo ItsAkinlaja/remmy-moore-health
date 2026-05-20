@@ -102,7 +102,7 @@ export default function FAQSection() {
           <h3 className="text-xl font-bold text-slate-900 mb-2">Still have questions?</h3>
           <p className="text-slate-600 mb-6">Our care coordinators are available to help you find the answers you need.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <a href="tel:+1-800-000-0000" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
+            <a href="tel:+16785994557" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition-colors">
               Call Us Now
             </a>
             <a href="/contact" className="bg-slate-100 text-slate-900 px-8 py-3 rounded-lg font-bold hover:bg-slate-200 transition-colors">

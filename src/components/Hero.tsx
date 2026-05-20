@@ -126,7 +126,7 @@ export default function Hero() {
             <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              href="tel:+1-800-000-0000"
+              href="tel:+16785994557"
               className="flex items-center gap-2 px-7 py-3.5 rounded-xl
                          bg-white/10 backdrop-blur-sm border border-white/20
                          text-white font-semibold text-sm

@@ -64,7 +64,7 @@ export default function NotFound() {
               Back to Home
             </Link>
             <a
-              href="tel:+1-800-000-0000"
+              href="tel:+16785994557"
               className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-slate-900 border-2 border-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors shadow-md hover:shadow-lg"
             >
               <Phone className="w-4 h-4" />

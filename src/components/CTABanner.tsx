@@ -19,9 +19,9 @@ export default function CTABanner() {
         </p>
 
         <div className="flex flex-wrap justify-center gap-4">
-          <a href="tel:+1-800-000-0000" className="flex items-center gap-3 px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
+          <a href="tel:+16785994557" className="flex items-center gap-3 px-8 py-4 bg-white text-blue-600 font-bold rounded-lg hover:bg-blue-50 transition-colors">
             <Phone className="w-5 h-5" />
-            Call (800) 000-0000
+            Call 678 599 4557
           </a>
 
           <Link href="/contact" className="flex items-center gap-3 px-8 py-4 bg-blue-700 text-white font-bold rounded-lg border border-blue-500 hover:bg-blue-800 transition-colors">

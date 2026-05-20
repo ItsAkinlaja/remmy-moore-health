@@ -26,11 +26,11 @@ export default function FloatingCTA() {
                 className="flex flex-col gap-2"
               >
                 <a
-                  href="tel:+1-800-000-0000"
+                  href="tel:+16785994557"
                   className="flex items-center gap-3 px-4 py-3 bg-white rounded-lg shadow-xl border border-slate-200 text-slate-900 font-bold text-sm hover:border-blue-600 transition-colors"
                 >
                   <Phone className="w-4 h-4 text-blue-600" />
-                  Call (800) 000-0000
+                  Call 678 599 4557
                 </a>
 
                 <a
