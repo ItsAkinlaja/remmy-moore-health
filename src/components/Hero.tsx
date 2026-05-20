@@ -165,8 +165,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2 }}
-        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20
-                   flex flex-col items-center gap-1"
+        className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-1"
       >
         <motion.div
           animate={{ y: [0, 6, 0] }}
