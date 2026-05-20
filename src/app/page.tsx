@@ -24,7 +24,7 @@ export default function Home() {
         <Hero />
         <HomepageTrustRibbon />
         <HomepageVisualStory />
-        <ServicesSection />
+        <ServicesSection limit={4} />
         <ProcessSection />
         <HomePreview />
       </div>

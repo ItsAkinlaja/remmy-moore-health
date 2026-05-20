@@ -17,6 +17,7 @@ import {
 
 interface ServicesSectionProps {
   showAllButton?: boolean;
+  limit?: number;
 }
 
 const services = [
@@ -24,53 +25,53 @@ const services = [
     icon: Stethoscope,
     title: "Skilled Nursing",
     description: "Licensed nurses providing wound care, medication management, and clinical health monitoring.",
-    image: "https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=800&auto=format&fit=crop",
+    image: "https://ik.imagekit.io/scmchurch/cdc-LbUOh89q4Es-unsplash.jpg",
   },
   {
     icon: Heart,
     title: "Personal Care",
     description: "Gentle support with bathing, grooming, dressing, and daily hygiene with full dignity.",
-    image: "https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=800&auto=format&fit=crop",
+    image: "https://ik.imagekit.io/scmchurch/maria-luisa-queiroz-KlBltbAwxWk-unsplash.jpg",
   },
   {
     icon: Users,
     title: "Elderly Care",
     description: "Safety and cognitive engagement focused care to help seniors thrive in their own homes.",
-    image: "https://images.unsplash.com/photo-1576765607924-3f7b8410a787?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1200&h=900&fit=crop",
   },
   {
     icon: Baby,
     title: "Pediatric Care",
     description: "Specialized, compassionate care for children with complex medical needs or chronic illnesses.",
-    image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=900&fit=crop",
   },
   {
     icon: Accessibility,
     title: "Disability Support",
     description: "Adaptive care and daily assistance helping clients live independently in their community.",
-    image: "https://images.unsplash.com/photo-1554734867-bf3c00a49371?q=80&w=800&auto=format&fit=crop",
+    image: "https://ik.imagekit.io/scmchurch/ortopediatri-cocuk-ortopedi-akademisi-rXqfl7MKEJ4-unsplash.jpg",
   },
   {
     icon: Coffee,
     title: "Companion Care",
     description: "Friendly companionship, social engagement, and light housekeeping for emotional well-being.",
-    image: "https://images.unsplash.com/photo-1472289065668-ce650ac443d2?q=80&w=800&auto=format&fit=crop",
+    image: "https://ik.imagekit.io/scmchurch/geralt-hospital-10222177_1920.jpg",
   },
   {
     icon: Pill,
     title: "Medication Help",
     description: "Professional reminders and coordination to ensure safe and accurate medication adherence.",
-    image: "https://images.unsplash.com/photo-1576602976047-174e57a47881?q=80&w=800&auto=format&fit=crop",
+    image: "https://ik.imagekit.io/scmchurch/navy-medicine-0Cc92_aPs3A-unsplash.jpg",
   },
   {
     icon: Activity,
     title: "Post-Surgery",
     description: "Focused recovery support including clinical monitoring, wound care and physical assistance.",
-    image: "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=800&auto=format&fit=crop",
+    image: "https://ik.imagekit.io/scmchurch/sakarie-mustafe-hidig-pbznkLXhGmo-unsplash.jpg",
   },
 ];
 
-export default function ServicesSection({ showAllButton = true }: ServicesSectionProps) {
+export default function ServicesSection({ showAllButton = true, limit }: ServicesSectionProps) {
   return (
     <section id="services" className="py-24 bg-white" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -84,7 +85,7 @@ export default function ServicesSection({ showAllButton = true }: ServicesSectio
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
+          {services.slice(0, limit ?? services.length).map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}

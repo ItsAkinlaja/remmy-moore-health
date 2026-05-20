@@ -16,7 +16,7 @@ export default function FAQPage() {
       <PageHero
         title="Frequently Asked Questions"
         subtitle="Find Answers to Your Questions"
-        image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
+        image="https://ik.imagekit.io/scmchurch/national-cancer-institute-tl447mekwuQ-unsplash.jpg?updatedAt=1778872749039"
       />
       <FAQSection />
       <Footer />

@@ -17,7 +17,7 @@ export default function AboutPage() {
       <PageHero
         title="About Us"
         subtitle="Trusted Home Health Care Since 2015"
-        image="https://images.unsplash.com/photo-1631217314830-acf6f1b2b735?w=1200&h=600&fit=crop"
+        image="https://ik.imagekit.io/scmchurch/cdc-XdErxxR6Xog-unsplash.jpg"
       />
       <TrustSection />
       <WhyUsSection />

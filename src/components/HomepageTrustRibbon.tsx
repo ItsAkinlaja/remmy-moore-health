@@ -23,7 +23,7 @@ export default function HomepageTrustRibbon() {
   return (
     <section className="relative z-20 py-10 bg-white border-y border-slate-100" aria-label="Trust highlights">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-wrap items-center justify-center sm:justify-between gap-8 md:gap-12">
+        <div className="flex flex-wrap items-center justify-center sm:justify-between gap-8 md:gap-12 mt-6 sm:mt-0">
           {trustItems.map((item) => (
             <div key={item.label} className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center shrink-0">
