@@ -12,7 +12,7 @@ export default function NotFound() {
       <Navbar />
 
       {/* Hero Section with 404 */}
-      <div className="relative w-full h-[45vh] overflow-hidden bg-slate-900">
+      <div className="relative w-full h-[40vh] md:h-[60vh] overflow-hidden bg-slate-900">
         {/* Background Image */}
         <Image
           src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"

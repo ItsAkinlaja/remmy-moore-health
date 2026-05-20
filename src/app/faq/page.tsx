@@ -17,7 +17,6 @@ export default function FAQPage() {
         title="Frequently Asked Questions"
         subtitle="Find Answers to Your Questions"
         image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
-        height="60"
       />
       <FAQSection />
       <Footer />

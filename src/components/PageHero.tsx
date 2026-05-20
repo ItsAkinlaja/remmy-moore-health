@@ -27,12 +27,8 @@ export default function PageHero({
   overlayOpacity = 0.5,
   textColor = "white",
 }: PageHeroProps) {
-  const heightClass = {
-    "40": "h-[40vh]",
-    "45": "h-[45vh]",
-    "50": "h-[50vh]",
-    "60": "h-[60vh]",
-  }[height];
+  // Responsive height: mobile 40vh, desktop 60vh
+  const heightClass = "h-[40vh] md:h-[60vh]";
 
   return (
     <div className="w-full">

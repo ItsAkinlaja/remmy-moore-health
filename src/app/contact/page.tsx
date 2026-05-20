@@ -36,7 +36,6 @@ export default function ContactPage() {
         title="Get in Touch"
         subtitle="We're Ready to Help. Let's Connect."
         image="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&h=600&fit=crop"
-        height="60"
       />
       <div className="pt-0">
         <ContactSection />

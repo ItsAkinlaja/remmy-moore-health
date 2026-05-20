@@ -17,7 +17,6 @@ export default function CoveragePage() {
         title="Insurance & Coverage"
         subtitle="We Work with Most Insurance Plans"
         image="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&h=600&fit=crop"
-        height="60"
       />
       <CoverageSection />
       <Footer />
