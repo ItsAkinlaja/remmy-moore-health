@@ -61,7 +61,7 @@ const services = [
     icon: Pill,
     title: "Medication Help",
     description: "Professional reminders and coordination to ensure safe and accurate medication adherence.",
-    image: "https://ik.imagekit.io/scmchurch/navy-medicine-0Cc92_aPs3A-unsplash.jpg",
+    image: "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=1200&h=900&fit=crop",
   },
   {
     icon: Activity,
