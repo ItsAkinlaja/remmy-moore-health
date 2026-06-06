@@ -7,7 +7,7 @@ import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata = {
   title: "Our Services | Remmy Moore Home Health Care Agency",
-  description: "Comprehensive home health care services including skilled nursing, personal care, elderly care, pediatric care, and more. Medicaid and Medicare accepted.",
+  description: "Comprehensive home health care services including skilled nursing, activities of daily living (ADL), elderly care, pediatric care, and more. Medicaid and Medicare accepted.",
 };
 
 export default function ServicesPage() {

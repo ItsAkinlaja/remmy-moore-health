@@ -17,7 +17,7 @@ const images = [
 ];
 
 const highlights = [
-  "Dignified personal care tailored to you",
+  "Dignified support with Activities of Daily Living (ADL)",
   "Professional medical support at home",
   "Flexible scheduling for your convenience",
 ];

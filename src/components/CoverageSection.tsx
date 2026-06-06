@@ -58,7 +58,7 @@ export default function CoverageSection() {
             Insurance & Coverage
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            We work with all major insurance programs and welcome private clients of all ages.
+            We work with all insurance plans and welcome private clients of all ages.
           </p>
         </div>
 

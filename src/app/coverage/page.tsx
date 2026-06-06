@@ -15,7 +15,7 @@ export default function CoveragePage() {
       <Navbar />
       <PageHero
         title="Insurance & Coverage"
-        subtitle="We Work with Most Insurance Plans"
+        subtitle="We Work with All Insurance Plans"
           image="https://ik.imagekit.io/scmchurch/patty-brito-Y-3Dt0us7e0-unsplash.jpg"
       />
       <CoverageSection />

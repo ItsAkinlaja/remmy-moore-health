@@ -29,8 +29,8 @@ const services = [
   },
   {
     icon: Heart,
-    title: "Personal Care",
-    description: "Gentle support with bathing, grooming, dressing, and daily hygiene with full dignity.",
+    title: "Activities of Daily Living (ADL)",
+    description: "Gentle support with bathing, grooming, dressing, eating, and daily hygiene with full dignity.",
     image: "https://ik.imagekit.io/scmchurch/maria-luisa-queiroz-KlBltbAwxWk-unsplash.jpg",
   },
   {
@@ -109,8 +109,11 @@ export default function ServicesSection({ showAllButton = true, limit }: Service
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-2">{service.title}</h3>
                 <p className="text-slate-600 text-sm leading-relaxed mb-6">{service.description}</p>
-                <Link href="/services" className="inline-flex items-center gap-1 text-sm font-bold text-blue-600 hover:underline">
-                  Service Details
+                <Link
+                  href={`/contact?service=${encodeURIComponent(service.title)}`}
+                  className="inline-flex items-center gap-1 text-sm font-bold text-blue-600 hover:underline"
+                >
+                  Request Assessment
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

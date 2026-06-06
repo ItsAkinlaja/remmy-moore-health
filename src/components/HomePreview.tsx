@@ -12,7 +12,7 @@ import {
 
 const stats = [
   { value: "500+", label: "Families Served" },
-  { value: "10+", label: "Years Experience" },
+  { value: "Licensed", label: "Professional Team" },
   { value: "98%", label: "Satisfaction" },
   { value: "24/7", label: "Care Support" },
 ];
@@ -28,7 +28,7 @@ const links = [
     href: "/coverage",
     icon: CreditCard,
     title: "Insurance & Coverage",
-    description: "We accept Medicare, Medicaid, and most private insurance plans for all ages.",
+    description: "We accept Medicare, Medicaid, and all private insurance plans for all ages.",
   },
   {
     href: "/faq",

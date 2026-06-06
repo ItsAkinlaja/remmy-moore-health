@@ -51,7 +51,7 @@ function XIcon({ className }: { className?: string }) {
 
 const services = [
   "Skilled Nursing",
-  "Personal Care Assistance",
+  "Activities of Daily Living (ADL)",
   "Elderly Care",
   "Pediatric Home Care",
   "Disability Support",

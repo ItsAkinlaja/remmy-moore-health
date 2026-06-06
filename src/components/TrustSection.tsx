@@ -38,7 +38,7 @@ const trustItems = [
   {
     icon: Award,
     title: "Quality Focused",
-    description: "A decade of delivering high-quality home health care to local families.",
+    description: "Committed to delivering high-quality, compassionate home health care to local families.",
   },
 ];
 

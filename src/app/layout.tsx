@@ -21,8 +21,8 @@ export const metadata: Metadata = {
     default: "Remmy Moore Home Health Care Agency LLC",
     template: "%s | Remmy Moore Home Health Care Agency LLC",
   },
-  description: "Compassionate, professional home health care services. Accepting Medicaid, Medicare, and private pay. Skilled nursing, personal care, elderly care, and more.",
-  keywords: ["home health care", "Remmy Moore", "skilled nursing", "personal care", "elderly care", "pediatric home care", "Medicaid", "Medicare"],
+  description: "Compassionate, professional home health care services. Accepting Medicaid, Medicare, and private pay. Skilled nursing, activities of daily living (ADL), elderly care, and more.",
+  keywords: ["home health care", "Remmy Moore", "skilled nursing", "ADL", "Activities of Daily Living", "personal care", "elderly care", "pediatric home care", "Medicaid", "Medicare"],
   authors: [{ name: "Remmy Moore Home Health Care Agency LLC" }],
   icons: {
     icon: "/favicon.svg",

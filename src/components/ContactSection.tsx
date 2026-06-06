@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import emailjs from "@emailjs/browser";
 import {
   Phone,
@@ -38,7 +39,7 @@ const contactInfo = [
 
 const serviceOptions = [
   "Skilled Nursing",
-  "Personal Care Assistance",
+  "Activities of Daily Living (ADL)",
   "Elderly Care",
   "Pediatric Home Care",
   "Disability Support",
@@ -49,9 +50,27 @@ const serviceOptions = [
 ];
 
 export default function ContactSection() {
+  return (
+    <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading contact form...</div>}>
+      <ContactFormContent />
+    </Suspense>
+  );
+}
+
+function ContactFormContent() {
+  const searchParams = useSearchParams();
+  const preselectedService = searchParams.get("service");
+
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [selectedService, setSelectedService] = useState("");
+
+  useEffect(() => {
+    if (preselectedService && serviceOptions.includes(preselectedService)) {
+      setSelectedService(preselectedService);
+    }
+  }, [preselectedService]);
 
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -254,6 +273,8 @@ export default function ContactSection() {
                   <select
                     id="service"
                     name="service"
+                    value={selectedService}
+                    onChange={(e) => setSelectedService(e.target.value)}
                     className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all appearance-none"
                   >
                     <option value="">Select a service...</option>
