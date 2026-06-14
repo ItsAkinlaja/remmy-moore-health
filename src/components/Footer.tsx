@@ -67,6 +67,7 @@ import Link from "next/link";
 const quickLinks = [
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services" },
+  { label: "Careers", href: "/careers" },
   { label: "Coverage & Eligibility", href: "/coverage" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "FAQ", href: "/faq" },

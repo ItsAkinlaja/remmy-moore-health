@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense, useMemo } from "react";
 import { useSearchParams } from "next/navigation";
 import emailjs from "@emailjs/browser";
 import {
@@ -46,31 +46,43 @@ const serviceOptions = [
   "Companion Care",
   "Medication Assistance",
   "Post-Surgery Care",
+  "Employment Inquiry",
   "Other / Not Sure",
 ];
 
 export default function ContactSection() {
   return (
     <Suspense fallback={<div className="h-96 flex items-center justify-center">Loading contact form...</div>}>
-      <ContactFormContent />
+      <ContactFormWrapper />
     </Suspense>
   );
 }
 
+function ContactFormWrapper() {
+  const searchParams = useSearchParams();
+  const key = searchParams.toString();
+  return <ContactFormContent key={key} />;
+}
+
 function ContactFormContent() {
   const searchParams = useSearchParams();
-  const preselectedService = searchParams.get("service");
+
+  // Use useMemo to avoid re-calculating on every render
+  const initialValues = useMemo(() => {
+    const service = searchParams.get("service");
+    const role = searchParams.get("role");
+    return {
+      service: service && serviceOptions.includes(service) ? service : "",
+      message: role ? `I am interested in applying for the ${role} position.` : "",
+    };
+  }, [searchParams]);
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [selectedService, setSelectedService] = useState("");
 
-  useEffect(() => {
-    if (preselectedService && serviceOptions.includes(preselectedService)) {
-      setSelectedService(preselectedService);
-    }
-  }, [preselectedService]);
+  const [selectedService, setSelectedService] = useState(initialValues.service);
+  const [message, setMessage] = useState(initialValues.message);
 
   const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
   const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
@@ -87,7 +99,7 @@ function ContactFormContent() {
     const email = String(formData.get("email") || "").trim();
     const phone = String(formData.get("phone") || "").trim();
     const service = String(formData.get("service") || "").trim();
-    const message = String(formData.get("message") || "").trim();
+    const finalMessage = String(formData.get("message") || "").trim();
 
     if (!serviceId || !templateId || !publicKey) {
       setLoading(false);
@@ -95,7 +107,7 @@ function ContactFormContent() {
       return;
     }
 
-    if (!firstName || !lastName || !email || !phone || !message) {
+    if (!firstName || !lastName || !email || !phone || !finalMessage) {
       setLoading(false);
       setError("All required fields must be filled out.");
       return;
@@ -112,7 +124,7 @@ function ContactFormContent() {
           reply_to: email,
           phone,
           service,
-          message,
+          message: finalMessage,
           to_email: "Remmymoore90@gmail.com",
           to_phone: "678 599 4557",
           location: "170 Shady Lane, Rockmart, GA 30153",
@@ -291,6 +303,8 @@ function ContactFormContent() {
                     name="message"
                     rows={4}
                     required
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
                     placeholder="Tell us a bit about your needs..."
                     className="w-full px-6 py-4 rounded-2xl bg-white border border-slate-200 focus:outline-none focus:border-blue-600 focus:ring-4 focus:ring-blue-600/5 transition-all resize-none"
                   />

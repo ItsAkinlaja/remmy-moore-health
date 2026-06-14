@@ -47,11 +47,11 @@ export default function NotFound() {
           </div>
 
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
-            We couldn't find that page
+            We couldn&apos;t find that page
           </h2>
 
           <p className="text-lg text-slate-600 mb-10 leading-relaxed">
-            It may have been moved, or the address was mistyped. Don't worry—we're here to help you get back on track.
+            It may have been moved, or the address was mistyped. Don&apos;t worry—we&apos;re here to help you get back on track.
           </p>
 
           {/* CTA Buttons */}

@@ -11,9 +11,14 @@ const labels: Record<string, string> = {
   testimonials: "Testimonials",
   faq:          "FAQ",
   contact:      "Contact",
+  careers:      "Careers",
 };
 
-export default function Breadcrumb() {
+interface BreadcrumbProps {
+  variant?: "default" | "hero";
+}
+
+export default function Breadcrumb({ variant = "default" }: BreadcrumbProps) {
   const pathname = usePathname();
 
   // Don't render on homepage
@@ -28,22 +33,25 @@ export default function Breadcrumb() {
     isLast: i === segments.length - 1,
   }));
 
+  const isHero = variant === "hero";
+
   return (
     <nav
       aria-label="Breadcrumb"
-      className="w-full bg-white border-b border-slate-100"
+      className={`w-full ${isHero ? "bg-transparent" : "bg-white border-b border-slate-100"}`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ${isHero ? "flex justify-center" : ""}`}>
         <ol
-          className="flex items-center gap-1 py-3 text-sm"
+          className={`flex items-center gap-1 py-3 text-sm ${isHero ? "text-white/80" : "text-slate-400"}`}
           role="list"
         >
           {/* Home */}
           <li className="flex items-center">
             <Link
               href="/"
-              className="flex items-center gap-1 text-slate-400 hover:text-blue-600
-                         transition-colors duration-150 font-medium"
+              className={`flex items-center gap-1 transition-colors duration-150 font-medium ${
+                isHero ? "hover:text-white" : "hover:text-blue-600"
+              }`}
               aria-label="Home"
             >
               <Home className="w-3.5 h-3.5 flex-shrink-0" aria-hidden="true" />
@@ -54,12 +62,12 @@ export default function Breadcrumb() {
           {crumbs.map((crumb) => (
             <li key={crumb.href} className="flex items-center gap-1">
               <ChevronRight
-                className="w-3.5 h-3.5 text-slate-300 flex-shrink-0"
+                className={`w-3.5 h-3.5 flex-shrink-0 ${isHero ? "text-white/40" : "text-slate-300"}`}
                 aria-hidden="true"
               />
               {crumb.isLast ? (
                 <span
-                  className="text-slate-700 font-semibold"
+                  className={`font-semibold ${isHero ? "text-white" : "text-slate-700"}`}
                   aria-current="page"
                 >
                   {crumb.label}
@@ -67,8 +75,9 @@ export default function Breadcrumb() {
               ) : (
                 <Link
                   href={crumb.href}
-                  className="text-slate-400 hover:text-blue-600
-                             transition-colors duration-150 font-medium"
+                  className={`transition-colors duration-150 font-medium ${
+                    isHero ? "hover:text-white" : "hover:text-blue-600"
+                  }`}
                 >
                   {crumb.label}
                 </Link>

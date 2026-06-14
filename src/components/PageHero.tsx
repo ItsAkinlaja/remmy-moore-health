@@ -11,9 +11,7 @@ interface PageHeroProps {
   image: string;
   /** Optional subtitle or description */
   subtitle?: string;
-  /** Height of hero section in viewport height (default: 45) */
-  height?: "40" | "45" | "50" | "60";
-  /** Optional dark overlay opacity (default: 0.5) */
+  /** Optional dark overlay opacity (default: 0.6) */
   overlayOpacity?: number;
   /** Optional text color (default: white) */
   textColor?: string;
@@ -23,64 +21,60 @@ export default function PageHero({
   title,
   image,
   subtitle,
-  height = "45",
-  overlayOpacity = 0.5,
+  overlayOpacity = 0.6,
   textColor = "white",
 }: PageHeroProps) {
-  // Responsive height: mobile 40vh, desktop 60vh
-  const heightClass = "h-[40vh] md:h-[60vh]";
+  // Hero height: mobile 35vh, desktop 50vh
+  const heightClass = "h-[35vh] md:h-[50vh]";
 
   return (
-    <div className="w-full">
-      {/* Breadcrumb - positioned absolutely above hero */}
-      <div className="relative z-10 bg-white border-b border-slate-100">
-        <Breadcrumb />
-      </div>
+    <div className={`relative w-full ${heightClass} overflow-hidden bg-slate-900`}>
+      {/* Background Image */}
+      <Image
+        src={image}
+        alt={title}
+        fill
+        priority
+        className="object-cover absolute inset-0"
+        sizes="100vw"
+      />
 
-      {/* Hero Section */}
-      <div className={`relative w-full ${heightClass} overflow-hidden bg-slate-900`}>
-        {/* Background Image */}
-        <Image
-          src={image}
-          alt={title}
-          fill
-          priority
-          className="object-cover absolute inset-0"
-          sizes="100vw"
-        />
+      {/* Dark Overlay */}
+      <div
+        className="absolute inset-0 bg-slate-950"
+        style={{ opacity: overlayOpacity }}
+      />
 
-        {/* Dark Overlay with gradient for better text readability */}
-        <div
-          className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"
-          style={{ opacity: overlayOpacity }}
-        />
+      {/* Content Container */}
+      <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center pt-20">
+        <div className="max-w-4xl mx-auto">
+          {/* Breadcrumb inside Hero */}
+          <div className="mb-6">
+            <Breadcrumb variant="hero" />
+          </div>
 
-        {/* Content */}
-        <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
-          <div className="max-w-4xl mx-auto">
-            {/* Title */}
-            <h1
-              className="text-4xl sm:text-5xl lg:text-6xl font-black mb-4 leading-tight drop-shadow-lg"
+          {/* Title */}
+          <h1
+            className="text-4xl sm:text-5xl lg:text-7xl font-bold mb-4 leading-tight tracking-tight"
+            style={{ color: textColor }}
+          >
+            {title}
+          </h1>
+
+          {/* Subtitle */}
+          {subtitle && (
+            <p
+              className="text-lg sm:text-xl lg:text-2xl font-medium opacity-90 max-w-2xl mx-auto"
               style={{ color: textColor }}
             >
-              {title}
-            </h1>
-
-            {/* Subtitle */}
-            {subtitle && (
-              <p
-                className="text-lg sm:text-xl lg:text-2xl font-medium drop-shadow-md opacity-95"
-                style={{ color: textColor }}
-              >
-                {subtitle}
-              </p>
-            )}
-          </div>
+              {subtitle}
+            </p>
+          )}
         </div>
-
-        {/* Decorative gradient bottom fade for visual polish */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white via-white/50 to-transparent opacity-0 hover:opacity-10 transition-opacity duration-300" />
       </div>
+
+      {/* Subtle bottom fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
     </div>
   );
 }
