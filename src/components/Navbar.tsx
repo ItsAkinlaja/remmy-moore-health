@@ -17,6 +17,9 @@ const navLinks = [
   { label: "Contact", href: "/contact" },
 ];
 
+const SCROLLED_LOGO = "https://ik.imagekit.io/scmchurch/63a0d4e0-6348-45ed-8d37-8998f788fafe-removebg-preview%20(1).png";
+const DEFAULT_LOGO  = "https://ik.imagekit.io/scmchurch/ChatGPT_Image_Jul_26__2026__07_04_14_PM-removebg-preview.png";
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -64,14 +67,11 @@ export default function Navbar() {
               <motion.div whileHover={{ scale: 1.02 }}>
                 <div className="relative w-28 h-28 sm:w-36 sm:h-36">
                   <Image
-                    src={
-                      scrolled
-                        ? "https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png"
-                        : "https://ik.imagekit.io/scmchurch/ChatGPT_Image_May_20__2026__06_07_45_AM-removebg-preview.png?updatedAt=1779253794957"
-                    }
+                    src={scrolled ? SCROLLED_LOGO : DEFAULT_LOGO}
                     alt="Remmy Moore Home Health Care Agency LLC logo"
                     fill
                     priority
+                    unoptimized={scrolled}
                     sizes="(min-width: 640px) 144px, 112px"
                     className="object-contain transition-all duration-300"
                   />
@@ -155,14 +155,11 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                     <div className="relative w-20 h-20">
                       <Image
-                        src={
-                          scrolled
-                            ? "https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png"
-                            : "https://ik.imagekit.io/scmchurch/ChatGPT_Image_May_20__2026__06_07_45_AM-removebg-preview.png?updatedAt=1779253794957"
-                        }
+                        src={scrolled ? SCROLLED_LOGO : DEFAULT_LOGO}
                         alt="Remmy Moore Home Health Care Agency LLC logo"
                         fill
-                        sizes="64px"
+                        unoptimized={scrolled}
+                        sizes="80px"
                         className="object-contain transition-all duration-300"
                       />
                   </div>

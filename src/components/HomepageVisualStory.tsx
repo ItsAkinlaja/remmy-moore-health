@@ -72,7 +72,7 @@ export default function HomepageVisualStory() {
           >
             <div className="space-y-4 pt-12">
               <div className="aspect-[3/4] relative rounded-2xl overflow-hidden shadow-sm">
-                <Image src={images[0].src} alt={images[0].alt} fill className="object-cover" />
+                <Image src={images[0].src} alt={images[0].alt} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" />
               </div>
               <div className="h-24 bg-blue-50 rounded-2xl" />
             </div>

@@ -94,7 +94,7 @@ export default function Footer() {
             <div className="flex items-center mb-6">
               <div className="relative w-36 h-36">
                 <Image
-                  src="https://ik.imagekit.io/scmchurch/ChatGPT_Image_May_20__2026__06_07_45_AM-removebg-preview.png"
+                  src="https://ik.imagekit.io/scmchurch/ChatGPT_Image_Jul_26__2026__07_04_14_PM-removebg-preview.png"
                   alt="Remmy Moore Home Health Care Agency LLC logo"
                   fill
                   sizes="144px"
@@ -277,6 +277,21 @@ export default function Footer() {
             <p className="text-slate-600 text-xs">
               Remmy Moore Home Health Care Agency LLC is committed to ensuring digital accessibility
               for people with disabilities. We continually improve the user experience for everyone.
+            </p>
+          </div>
+
+          {/* Developer credit */}
+          <div className="mt-3 text-center">
+            <p className="text-slate-600 text-xs">
+              Designed &amp; Developed by{" "}
+              <a
+                href="https://akinlaja.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-slate-400 hover:text-white transition-colors underline underline-offset-2"
+              >
+                Akinlaja
+              </a>
             </p>
           </div>
         </div>

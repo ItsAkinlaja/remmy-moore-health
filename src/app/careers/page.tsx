@@ -8,8 +8,7 @@ import {
   Clock,
   ShieldCheck,
   ArrowRight,
-  Stethoscope,
-  Briefcase
+  Briefcase,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
@@ -42,33 +41,6 @@ const benefits = [
   },
 ];
 
-const roles = [
-  {
-    title: "Registered Nurse (RN)",
-    type: "Full-time / Part-time",
-    description: "Provide skilled clinical care and manage patient health plans at home.",
-    icon: Stethoscope,
-  },
-  {
-    title: "Certified Nursing Assistant (CNA)",
-    type: "Full-time / Part-time",
-    description: "Assist clients with activities of daily living and provide compassionate support.",
-    icon: Users,
-  },
-  {
-    title: "Home Health Aide (HHA)",
-    type: "Full-time / Part-time",
-    description: "Deliver personalized care and companionship to clients in their own homes.",
-    icon: Heart,
-  },
-  {
-    title: "Care Coordinator",
-    type: "Full-time",
-    description: "Manage scheduling and ensure seamless communication between families and caregivers.",
-    icon: Briefcase,
-  },
-];
-
 export default function CareersPage() {
   return (
     <main className="bg-white">
@@ -93,7 +65,7 @@ export default function CareersPage() {
             href="/contact?service=Employment%20Inquiry"
             className="inline-flex items-center gap-2 px-8 py-4 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-all shadow-lg shadow-blue-500/25"
           >
-            Apply Now
+            Submit Your Interest
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>
@@ -165,43 +137,40 @@ export default function CareersPage() {
         </div>
       </section>
 
-      {/* Roles Section */}
+      {/* Roles Section — no openings */}
       <section className="py-16 md:py-24 bg-slate-900 text-white overflow-hidden relative">
-        <div className="absolute inset-0 opacity-10 pointer-events-none"
+        <div
+          className="absolute inset-0 opacity-10 pointer-events-none"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
           }}
         />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-12 md:mb-16">
             <h2 className="text-3xl font-bold mb-4">Current Opportunities</h2>
             <p className="text-slate-400 max-w-2xl mx-auto text-lg">
-              Explore our open roles and find your perfect fit. We are always looking for exceptional talent to join our growing team.
+              We&apos;re always on the lookout for exceptional talent to join our growing team.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
-            {roles.map((role, i) => (
-              <div key={i} className="bg-white/5 backdrop-blur-sm p-8 rounded-2xl border border-white/10 hover:border-blue-500/50 transition-all group">
-                <div className="flex justify-between items-start mb-6">
-                  <div className="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center">
-                    <role.icon className="w-6 h-6" />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-blue-400 bg-blue-400/10 px-3 py-1 rounded-full">
-                    {role.type}
-                  </span>
-                </div>
-                <h3 className="text-xl font-bold mb-2">{role.title}</h3>
-                <p className="text-slate-400 text-sm leading-relaxed mb-6">{role.description}</p>
-                <Link
-                  href={`/contact?service=Employment%20Inquiry&role=${encodeURIComponent(role.title)}`}
-                  className="inline-flex items-center gap-2 text-sm font-bold text-white group-hover:text-blue-400 transition-colors"
-                >
-                  Apply for this role
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-              </div>
-            ))}
+          {/* Empty state */}
+          <div className="max-w-xl mx-auto text-center border border-white/10 rounded-2xl px-8 py-16">
+            <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto mb-6">
+              <Briefcase className="w-7 h-7 text-slate-400" aria-hidden="true" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-3">
+              No Open Positions at This Time
+            </h3>
+            <p className="text-slate-400 leading-relaxed mb-8">
+              We don&apos;t have any active job postings right now, but we&apos;re always interested in hearing from passionate healthcare professionals. Send us your details and we&apos;ll reach out when a role opens up.
+            </p>
+            <Link
+              href="/contact?service=Employment%20Inquiry"
+              className="inline-flex items-center gap-2 px-7 py-3.5 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors"
+            >
+              Submit Your Interest
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
@@ -209,16 +178,17 @@ export default function CareersPage() {
       {/* Final CTA */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6">Ready to Start Your Journey?</h2>
+          <h2 className="text-3xl font-bold text-slate-900 mb-6">Stay Connected</h2>
           <p className="text-lg text-slate-600 mb-10 max-w-2xl mx-auto">
-            Submit your application today and a member of our recruiting team will reach out to you within 48 hours.
+            There are no open positions at the moment, but we&apos;d still love to hear from you.
+            Drop us a message and we&apos;ll keep you in mind when a role becomes available.
           </p>
           <div className="flex justify-center">
             <Link
               href="/contact?service=Employment%20Inquiry"
               className="px-10 py-5 bg-blue-600 text-white font-bold rounded-2xl hover:bg-blue-700 shadow-xl shadow-blue-500/30 transition-all active:scale-[0.98] w-full sm:w-auto"
             >
-              Submit Application
+              Get in Touch
             </Link>
           </div>
         </div>

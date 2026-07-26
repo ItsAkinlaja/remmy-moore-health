@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description: "Professional home health care services delivered with compassion and dignity.",
     images: [
       {
-        url: "https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png?updatedAt=1779253324973",
+        url: "https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20Jul%2026,%202026,%2007_04_14%20PM.png",
         width: 1200,
         height: 630,
         alt: "Remmy Moore Home Health Care Agency - Social Share",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Remmy Moore Home Health Care Agency LLC",
     description: "Compassionate home health care services.",
-    images: ["https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20May%2016,%202026,%2012_55_54%20PM%20(1).png?updatedAt=1779253324973"],
+    images: ["https://ik.imagekit.io/scmchurch/ChatGPT%20Image%20Jul%2026,%202026,%2007_04_14%20PM.png"],
   },
 };
 

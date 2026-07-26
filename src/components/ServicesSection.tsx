@@ -99,6 +99,7 @@ export default function ServicesSection({ showAllButton = true, limit }: Service
                   src={service.image}
                   alt={service.title}
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-slate-900/10 group-hover:bg-transparent transition-colors" />
