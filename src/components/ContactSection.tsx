@@ -24,8 +24,8 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email Us",
-    value: "Remmymoore90@gmail.com",
-    href: "mailto:Remmymoore90@gmail.com",
+    value: "info@remmymoorehealth.com",
+    href: "mailto:info@remmymoorehealth.com",
     description: "We typically respond within 2 business hours."
   },
   {
@@ -125,7 +125,7 @@ function ContactFormContent() {
           phone,
           service,
           message: finalMessage,
-          to_email: "Remmymoore90@gmail.com",
+          to_email: "info@remmymoorehealth.com",
           to_phone: "678 599 4557",
           location: "170 Shady Lane, Rockmart, GA 30153",
         },

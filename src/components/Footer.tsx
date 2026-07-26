@@ -12,8 +12,8 @@ import {
 
 const primaryPhone = "678 599 4557";
 const primaryPhoneHref = "tel:+16785994557";
-const contactEmail = "Remmymoore90@gmail.com";
-const contactEmailHref = "mailto:Remmymoore90@gmail.com";
+const contactEmail = "info@remmymoorehealth.com";
+const contactEmailHref = "mailto:info@remmymoorehealth.com";
 const contactAddress = "170 Shady Lane, Rockmart, GA 30153";
 
 // Custom social icons as SVGs
