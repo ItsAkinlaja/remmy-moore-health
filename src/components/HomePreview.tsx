@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import {
   CreditCard,
@@ -10,11 +11,65 @@ import {
   Heart,
 } from "lucide-react";
 
-const stats = [
-  { value: "500+", label: "Families Served" },
-  { value: "Licensed", label: "Professional Team" },
-  { value: "98%", label: "Satisfaction" },
-  { value: "24/7", label: "Care Support" },
+// ── Count-up hook ──────────────────────────────────────────
+function useCountUp(target: number, duration = 1800, start = false) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!start) return;
+    let startTime: number | null = null;
+
+    const step = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      // ease-out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * target));
+      if (progress < 1) requestAnimationFrame(step);
+    };
+
+    requestAnimationFrame(step);
+  }, [start, target, duration]);
+
+  return count;
+}
+
+// ── Animated stat item ────────────────────────────────────
+function StatItem({
+  target,
+  suffix,
+  label,
+  isText,
+  textValue,
+  started,
+}: {
+  target: number;
+  suffix: string;
+  label: string;
+  isText?: boolean;
+  textValue?: string;
+  started: boolean;
+}) {
+  const count = useCountUp(target, 1800, started && !isText);
+
+  return (
+    <div className="text-center">
+      <div className="text-3xl sm:text-4xl font-bold text-slate-900 mb-1">
+        {isText ? textValue : `${count}${suffix}`}
+      </div>
+      <div className="text-sm font-medium text-slate-500 uppercase tracking-wider">
+        {label}
+      </div>
+    </div>
+  );
+}
+
+// ── Stats data ────────────────────────────────────────────
+const statsData = [
+  { target: 500, suffix: "+", label: "Families Served", isText: false },
+  { target: 0,   suffix: "",  label: "Professional Team", isText: true, textValue: "Licensed" },
+  { target: 98,  suffix: "%", label: "Satisfaction",      isText: false },
+  { target: 24,  suffix: "/7",label: "Care Support",      isText: false },
 ];
 
 const links = [
@@ -39,16 +94,28 @@ const links = [
 ];
 
 export default function HomePreview() {
+  const statsRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(statsRef, { once: true, margin: "-100px" });
+
   return (
     <section className="py-24 bg-white" aria-label="Quick links">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
         {/* Stats */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-24 border-y border-slate-100 py-12">
-          {stats.map((stat) => (
-            <div key={stat.label} className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-slate-900 mb-1">{stat.value}</div>
-              <div className="text-sm font-medium text-slate-500 uppercase tracking-wider">{stat.label}</div>
-            </div>
+        <div
+          ref={statsRef}
+          className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-24 border-y border-slate-100 py-12"
+        >
+          {statsData.map((stat) => (
+            <StatItem
+              key={stat.label}
+              target={stat.target}
+              suffix={stat.suffix}
+              label={stat.label}
+              isText={stat.isText}
+              textValue={stat.textValue}
+              started={isInView}
+            />
           ))}
         </div>
 
@@ -62,7 +129,10 @@ export default function HomePreview() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Link href={item.href} className="group block h-full p-8 rounded-2xl border border-slate-200 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-500/5 transition-all">
+              <Link
+                href={item.href}
+                className="group block h-full p-8 rounded-2xl border border-slate-200 hover:border-blue-600 hover:shadow-lg hover:shadow-blue-500/5 transition-all"
+              >
                 <div className="w-12 h-12 rounded-lg bg-slate-50 flex items-center justify-center mb-6 group-hover:bg-blue-50 transition-colors">
                   <item.icon className="w-6 h-6 text-slate-600 group-hover:text-blue-600 transition-colors" />
                 </div>
@@ -85,14 +155,21 @@ export default function HomePreview() {
             Experience the difference of personalized care. Our team is ready to provide the support you need to thrive at home.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="px-8 py-3.5 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors">
+            <Link
+              href="/contact"
+              className="px-8 py-3.5 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition-colors"
+            >
               Contact Us Today
             </Link>
-            <Link href="/testimonials" className="px-8 py-3.5 bg-white text-slate-900 border border-slate-200 font-bold rounded-lg hover:bg-slate-50 transition-colors">
+            <Link
+              href="/testimonials"
+              className="px-8 py-3.5 bg-white text-slate-900 border border-slate-200 font-bold rounded-lg hover:bg-slate-50 transition-colors"
+            >
               Success Stories
             </Link>
           </div>
         </div>
+
       </div>
     </section>
   );

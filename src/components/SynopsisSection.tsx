@@ -84,9 +84,10 @@ export default function SynopsisSection() {
           >
             <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6958?q=80&w=1200&auto=format&fit=crop"
+                src="https://ik.imagekit.io/scmchurch/cdc-LbUOh89q4Es-unsplash.jpg"
                 alt="Compassionate Care"
                 fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent" />

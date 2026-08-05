@@ -155,12 +155,12 @@ export default function Navbar() {
                 <div className="flex items-center gap-3">
                     <div className="relative w-20 h-20">
                       <Image
-                        src={scrolled ? SCROLLED_LOGO : DEFAULT_LOGO}
+                        src={SCROLLED_LOGO}
                         alt="Remmy Moore Home Health Care Agency LLC logo"
                         fill
-                        unoptimized={scrolled}
+                        unoptimized
                         sizes="80px"
-                        className="object-contain transition-all duration-300"
+                        className="object-contain"
                       />
                   </div>
                 </div>

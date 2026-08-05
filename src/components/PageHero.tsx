@@ -28,7 +28,7 @@ export default function PageHero({
   const heightClass = "h-[35vh] md:h-[50vh]";
 
   return (
-    <div className={`relative w-full ${heightClass} overflow-hidden bg-slate-900`}>
+    <div className={`relative w-full ${heightClass} overflow-hidden bg-slate-900 pt-20 md:pt-24`}>
       {/* Background Image */}
       <Image
         src={image}
@@ -46,7 +46,7 @@ export default function PageHero({
       />
 
       {/* Content Container */}
-      <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center pt-20">
+      <div className="relative z-20 h-full flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumb inside Hero */}
           <div className="mb-6">
