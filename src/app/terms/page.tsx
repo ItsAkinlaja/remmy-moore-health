@@ -3,7 +3,12 @@ import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service | Remmy Moore Home Health Care Agency – Rockmart, GA",
+  description:
+    "Terms of service for Remmy Moore Home Health Care Agency LLC, serving Rockmart, GA 30153 and Polk County.",
+  alternates: {
+    canonical: "https://remmymoorehealthcare.com/terms",
+  },
 };
 
 export default function TermsPage() {

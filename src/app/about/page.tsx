@@ -7,8 +7,18 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata = {
-  title: "About Our Agency | Remmy Moore Home Health Care",
-  description: "Discover Remmy Moore Home Health Care Agency. We provide a professional high-level synopsis of services including Skilled Nursing and ADL support. Trusted home healthcare is just one call away.",
+  title: "About Us | Home Health Care Agency in Rockmart, GA",
+  description:
+    "Learn about Remmy Moore Home Health Care Agency LLC, proudly serving Rockmart, Cedartown, and Polk County, GA. Skilled nursing, ADL support, and compassionate in-home care. Call (678) 599-4557.",
+  alternates: {
+    canonical: "https://remmymoorehealthcare.com/about",
+  },
+  openGraph: {
+    title: "About Remmy Moore Home Health Care – Rockmart, GA",
+    description:
+      "Meet the team behind trusted home health care in Rockmart, GA. Serving Polk County and surrounding areas with skilled nursing and personal care.",
+    url: "https://remmymoorehealthcare.com/about",
+  },
 };
 
 export default function AboutPage() {

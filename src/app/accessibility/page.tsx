@@ -3,7 +3,12 @@ import PageHero from "@/components/PageHero";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Accessibility Statement",
+  title: "Accessibility Statement | Remmy Moore Home Health Care Agency – Rockmart, GA",
+  description:
+    "Accessibility statement for Remmy Moore Home Health Care Agency LLC. We are committed to digital accessibility for all visitors, including those with disabilities.",
+  alternates: {
+    canonical: "https://remmymoorehealthcare.com/accessibility",
+  },
 };
 
 export default function AccessibilityPage() {

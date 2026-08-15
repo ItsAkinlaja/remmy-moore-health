@@ -5,8 +5,18 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata = {
-  title: "FAQ | Remmy Moore Home Health Care Agency",
-  description: "Frequently asked questions about our home health care services, insurance coverage, caregiver qualifications, and how to get started.",
+  title: "FAQ – Home Health Care Questions Answered | Rockmart, GA",
+  description:
+    "Common questions about home health care in Rockmart, GA. Learn about Medicaid & Medicare coverage, caregiver qualifications, how to get started, and what to expect from Remmy Moore Home Health Care.",
+  alternates: {
+    canonical: "https://remmymoorehealthcare.com/faq",
+  },
+  openGraph: {
+    title: "Home Health Care FAQ – Rockmart & Polk County, GA",
+    description:
+      "Get answers about home health care services, insurance, and eligibility in Rockmart, GA. Remmy Moore Home Health Care Agency LLC.",
+    url: "https://remmymoorehealthcare.com/faq",
+  },
 };
 
 export default function FAQPage() {

@@ -5,8 +5,18 @@ import Footer from "@/components/Footer";
 import FloatingCTA from "@/components/FloatingCTA";
 
 export const metadata = {
-  title: "Insurance & Coverage | Remmy Moore Home Health Care Agency",
-  description: "We accept Medicaid, Medicare, private insurance, and private pay. Learn about our coverage options and client eligibility for all ages.",
+  title: "Medicaid & Medicare Home Health Coverage in Rockmart, GA | Remmy Moore",
+  description:
+    "Remmy Moore Home Health Care accepts Medicaid, Medicare, private insurance, and private pay in Rockmart, GA and Polk County. Find out if you qualify — call (678) 599-4557.",
+  alternates: {
+    canonical: "https://remmymoorehealthcare.com/coverage",
+  },
+  openGraph: {
+    title: "Insurance & Coverage – Home Health Care Rockmart, GA",
+    description:
+      "Medicaid, Medicare, private insurance, and self-pay accepted. Home health care coverage for all ages in Rockmart and Polk County, GA.",
+    url: "https://remmymoorehealthcare.com/coverage",
+  },
 };
 
 export default function CoveragePage() {
