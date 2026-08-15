@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Privacy policy for Remmy Moore Home Health Care Agency LLC, located at 170 Shady Lane, Rockmart, GA 30153. HIPAA-compliant care you can trust.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/privacy",
+    canonical: "https://www.remmymoorehealth.com/privacy",
   },
 };
 

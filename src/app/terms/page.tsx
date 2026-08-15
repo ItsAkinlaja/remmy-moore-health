@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Terms of service for Remmy Moore Home Health Care Agency LLC, serving Rockmart, GA 30153 and Polk County.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/terms",
+    canonical: "https://www.remmymoorehealth.com/terms",
   },
 };
 

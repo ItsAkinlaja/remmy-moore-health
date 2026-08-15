@@ -9,13 +9,13 @@ export const metadata = {
   description:
     "Remmy Moore Home Health Care accepts Medicaid, Medicare, private insurance, and private pay in Rockmart, GA and Polk County. Find out if you qualify — call (678) 599-4557.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/coverage",
+    canonical: "https://www.remmymoorehealth.com/coverage",
   },
   openGraph: {
     title: "Insurance & Coverage – Home Health Care Rockmart, GA",
     description:
       "Medicaid, Medicare, private insurance, and self-pay accepted. Home health care coverage for all ages in Rockmart and Polk County, GA.",
-    url: "https://remmymoorehealthcare.com/coverage",
+    url: "https://www.remmymoorehealth.com/coverage",
   },
 };
 

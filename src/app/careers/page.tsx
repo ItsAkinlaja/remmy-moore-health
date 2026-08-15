@@ -18,13 +18,13 @@ export const metadata = {
   description:
     "Join Remmy Moore Home Health Care Agency LLC in Rockmart, GA. We're looking for compassionate caregivers, CNAs, and nurses to serve Polk County. Submit your interest today.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/careers",
+    canonical: "https://www.remmymoorehealth.com/careers",
   },
   openGraph: {
     title: "Home Health Care Jobs in Rockmart, GA | Remmy Moore",
     description:
       "Looking for a home health care job in Rockmart or Polk County, GA? Remmy Moore offers meaningful work, flexible scheduling, and professional growth.",
-    url: "https://remmymoorehealthcare.com/careers",
+    url: "https://www.remmymoorehealth.com/careers",
   },
 };
 

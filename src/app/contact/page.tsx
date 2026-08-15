@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Contact Remmy Moore Home Health Care Agency LLC at (678) 599-4557 or info@remmymoorehealth.com. Located at 170 Shady Lane, Rockmart, GA 30153. Serving Polk County and surrounding areas.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/contact",
+    canonical: "https://www.remmymoorehealth.com/contact",
   },
   openGraph: {
     title: "Contact Remmy Moore Home Health Care – Rockmart, GA",
     description:
       "Call (678) 599-4557 or visit us at 170 Shady Lane, Rockmart, GA 30153. Serving Polk County and surrounding communities with compassionate home health care.",
-    url: "https://remmymoorehealthcare.com/contact",
+    url: "https://www.remmymoorehealth.com/contact",
   },
 };
 

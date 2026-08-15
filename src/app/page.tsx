@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   description:
     "Remmy Moore Home Health Care Agency LLC — trusted in-home care in Rockmart, GA (30153) and Polk County. Skilled nursing, ADL, elderly & pediatric care. Medicaid & Medicare accepted. Call (678) 599-4557.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com",
+    canonical: "https://www.remmymoorehealth.com",
   },
   openGraph: {
     title: "Home Health Care in Rockmart GA | Remmy Moore Home Health Care Agency",
     description:
       "Serving Rockmart, Cedartown, and all of Polk County with compassionate home health care. Medicaid & Medicare accepted.",
-    url: "https://remmymoorehealthcare.com",
+    url: "https://www.remmymoorehealth.com",
   },
 };
 

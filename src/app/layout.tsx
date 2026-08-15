@@ -16,7 +16,7 @@ export const viewport: Viewport = {
   themeColor: "#2563eb",
 };
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://remmymoorehealthcare.com";
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://www.remmymoorehealth.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),

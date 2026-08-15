@@ -9,13 +9,13 @@ export const metadata = {
   description:
     "Common questions about home health care in Rockmart, GA. Learn about Medicaid & Medicare coverage, caregiver qualifications, how to get started, and what to expect from Remmy Moore Home Health Care.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/faq",
+    canonical: "https://www.remmymoorehealth.com/faq",
   },
   openGraph: {
     title: "Home Health Care FAQ – Rockmart & Polk County, GA",
     description:
       "Get answers about home health care services, insurance, and eligibility in Rockmart, GA. Remmy Moore Home Health Care Agency LLC.",
-    url: "https://remmymoorehealthcare.com/faq",
+    url: "https://www.remmymoorehealth.com/faq",
   },
 };
 

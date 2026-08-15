@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Skilled nursing, ADL assistance, elderly care, pediatric home care, and more — serving Rockmart, GA (30153), Cedartown, and Polk County. Medicaid & Medicare accepted. Call (678) 599-4557.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/services",
+    canonical: "https://www.remmymoorehealth.com/services",
   },
   openGraph: {
     title: "Home Health Care Services – Rockmart & Polk County, GA",
     description:
       "Full range of in-home health care services in Rockmart, GA. Skilled nursing, personal care, ADL, elderly and pediatric care. Medicaid & Medicare accepted.",
-    url: "https://remmymoorehealthcare.com/services",
+    url: "https://www.remmymoorehealth.com/services",
   },
 };
 

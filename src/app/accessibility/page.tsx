@@ -7,7 +7,7 @@ export const metadata = {
   description:
     "Accessibility statement for Remmy Moore Home Health Care Agency LLC. We are committed to digital accessibility for all visitors, including those with disabilities.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/accessibility",
+    canonical: "https://www.remmymoorehealth.com/accessibility",
   },
 };
 

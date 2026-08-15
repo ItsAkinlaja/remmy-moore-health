@@ -7,17 +7,17 @@ export default function LocalBusinessSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "HomeAndConstructionBusiness",
-    "@id": "https://remmymoorehealthcare.com/#organization",
+    "@id": "https://www.remmymoorehealth.com/#organization",
     name: "Remmy Moore Home Health Care Agency LLC",
     alternateName: "Remmy Moore Health Care",
     description:
       "Compassionate, professional home health care services in Rockmart, GA and surrounding Polk County. Accepting Medicaid, Medicare, and private pay. Skilled nursing, ADL assistance, elderly care, pediatric care, and more.",
-    url: "https://remmymoorehealthcare.com",
+    url: "https://www.remmymoorehealth.com",
     telephone: "+16785994557",
     email: "info@remmymoorehealth.com",
     logo: {
       "@type": "ImageObject",
-      url: "https://remmymoorehealthcare.com/logo.png",
+      url: "https://www.remmymoorehealth.com/logo.png",
       width: 200,
       height: 60,
     },

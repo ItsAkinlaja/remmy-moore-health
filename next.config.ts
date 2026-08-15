@@ -67,11 +67,11 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
-      // Redirect www to non-www (canonical consistency)
+      // Redirect non-www to www (canonical consistency)
       {
         source: "/:path*",
-        has: [{ type: "host", value: "www.remmymoorehealthcare.com" }],
-        destination: "https://remmymoorehealthcare.com/:path*",
+        has: [{ type: "host", value: "remmymoorehealth.com" }],
+        destination: "https://www.remmymoorehealth.com/:path*",
         permanent: true,
       },
     ];

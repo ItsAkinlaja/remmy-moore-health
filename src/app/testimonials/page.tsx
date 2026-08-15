@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Read real reviews from families in Rockmart, GA who trust Remmy Moore Home Health Care Agency LLC. See why we maintain a 98% client satisfaction rate across Polk County.",
   alternates: {
-    canonical: "https://remmymoorehealthcare.com/testimonials",
+    canonical: "https://www.remmymoorehealth.com/testimonials",
   },
   openGraph: {
     title: "Client Testimonials – Remmy Moore Home Health Care, Rockmart GA",
     description:
       "Hear from families in Rockmart and Polk County, GA who rely on Remmy Moore for compassionate home health care.",
-    url: "https://remmymoorehealthcare.com/testimonials",
+    url: "https://www.remmymoorehealth.com/testimonials",
   },
 };
 
