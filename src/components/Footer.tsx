@@ -222,7 +222,7 @@ export default function Footer() {
                 <div>
                   <div className="text-xs text-slate-500 mb-0.5">Office Hours</div>
                   <div className="text-slate-300 text-sm">
-                    Mon–Fri: 8:00am – 6:00pm
+                    Mon–Sun: 8:00am – 6:00pm
                     <br />
                     <span className="text-green-400 font-medium">24/7 Emergency Support</span>
                   </div>
